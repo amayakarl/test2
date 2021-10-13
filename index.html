@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark pr-5 pl-5">
+            <a class="navbar-brand" href="#">
+                <span class="fa fa-graduation-cap"></span>
+                TutorCo.
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="modal" data-target="#contactUsModal" href="#contact-us">Contact
+                            Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="modal" data-target="#signupModal" href="#signup">Sign up</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-6">
+                    <form class="needs-validation" novalidate>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation" novalidate>
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustomf">First name</label>
+                                <input type="text" class="form-control" placeholder="First name" required>
+                                <div class="invalid-feedback">
+                                    please enter your firt name
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustom02">Last name</label>
+                                <input type="text" class="form-control" placeholder="Last name" required>
+                                <div class="invalid-feedback">
+                                    please enter your last name
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustomEmail">Email</label>
+                                <input type="email" class="form-control" placeholder="email" required>
+                                <div class="invalid-feedback">
+                                    please enter a valid email
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustom03">Address</label>
+                                <input type="text" class="form-control" placeholder="address" required>
+                                <div class="invalid-feedback">
+                                    Please provide your address.
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustom04">Phone #</label>
+                                <input type="tel" class="form-control" placeholder="eg. 333-333-3333"
+                                    attern="^\d{3}-\d{3}-\d{4}$" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid phone number in the format 333-333-333.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="dob">Date of Birth</label>
+                                <input type="date" class="form-control" required placeholder="your dob" name="dob" id="dob">
+                                <div class="invalid-feedback">please enter your date of birth</div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="interest">Area of Interest</label>
+                                <select class="custom-select" required>
+                                    <option value="">Select area of Interest</option>
+                                    <option value="1">math</option>
+                                    <option value="2">science</option>
+                                    <option value="3">social studies</option>
+                                    <option value="4">language arts</option>
+                                    <option value="5">spirituality</option>
+                                </select>
+                                <div class="invalid-feedback">Please select an area of interest</div>
+                            </div>
+                            
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label" for="invalidCheck">
+                                    Agree to terms and conditions
+                                </label>
+                                <div class="invalid-feedback">
+                                    You must agree before submitting.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="reset" class="btn btn-secondary">Reset</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="contactUsModal" tabindex="-1" role="dialog" aria-labelledby="contactUsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactUsModalLabel">Contact Us</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation" novalidate>
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustom01">First name</label>
+                                <input type="text" class="form-control" id="validationCustom01" placeholder="First name"
+                                    required>
+                                <div class="invalid-feedback">
+                                    please provide your first name.
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustom02">Last name</label>
+                                <input type="text" class="form-control" id="validationCustom02" placeholder="Last name"
+                                    required>
+                                <div class="invalid-feedback">
+                                    please provide your last name
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustom02">Email</label>
+                                <input type="email" class="form-control" placeholder="email" required>
+                                <div class="invalid-feedback">
+                                    please provide a valid email.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea class="form-control" name="message" required placeholder="Enter a message"
+                                id="message" cols="30" rows="10"></textarea>
+                            <div class="invalid-feedback">
+                                Please enter a message.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label" for="invalidCheck">
+                                    Agree to terms and conditions
+                                </label>
+                                <div class="invalid-feedback">
+                                    You must agree before submitting.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="reset" class="btn btn-secondary">Reset</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="Alert.js"></script>
+    <script>
+        (function () {
+            'use strict';
+            function onformModalHidden($modal) {
+                $modal.find('form')[0].reset()
+                $modal.find('form').removeClass('was-validated')
+            }
+            $('.modal').on('hidden.bs.modal', function (e) {
+                onformModalHidden($(this))
+
+            })
+
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        event.preventDefault();
+                        if (form.checkValidity() === false) {
+                            event.stopPropagation();
+                        }
+                        else {
+                            $('.modal').modal('hide')
+                            Alert({ status: true, message: 'Your form was successfully submitted!' })
+                        }
+                        form.classList.add('was-validated');
+
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+</body>
+
+</html>
