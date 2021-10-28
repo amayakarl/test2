@@ -1,0 +1,84 @@
+.leadin {
+  margin-top: 12%;
+  margin-bottom: 12%;
+}
+@media screen and (min-width: 992px) {
+  .leadin img {
+    max-width: 375px;
+  }
+}
+
+.color-white {
+  color: white;
+}
+.color-white_darken {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.bg_primary {
+  background-color: #505a66 !important;
+}
+.bg_secondary {
+  background-color: #edf0f5;
+}
+
+.btn_primary {
+  background-color: #447aa9;
+  color: white;
+  transition: all ease-in-out 0.3s;
+}
+.btn_primary:hover {
+  background-color: #505a66;
+  border: white 1px solid;
+}
+
+#carouselExampleIndicators {
+  top: 20px;
+}
+@media screen and (min-width: 992px) {
+  #carouselExampleIndicators {
+    top: -120px;
+  }
+  #carouselExampleIndicators .carousel-card {
+    max-width: 50%;
+  }
+  #carouselExampleIndicators .carousel-indicators {
+    bottom: -53px;
+  }
+}
+#carouselExampleIndicators .carousel-control-prev-icon, #carouselExampleIndicators .carousel-control-next-icon {
+  background-image: none;
+  font-size: 20px;
+}
+#carouselExampleIndicators .carousel-indicators li {
+  background-color: #447aa9;
+}
+#carouselExampleIndicators .carousel-indicators li.active {
+  background-color: #505a66;
+}
+
+@media screen and (max-width: 575px) {
+  .submit-btn {
+    text-align: center;
+  }
+}
+
+.service > div {
+  transition: all ease-in-out 0.3s;
+}
+.service > div div {
+  font-size: 34px;
+}
+.service > div:hover {
+  background-color: #505a66 !important;
+  color: white;
+}
+
+.blog-list-item {
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+.blog-list-item:hover {
+  background-color: white;
+  box-shadow: 0px 0px 5px gray;
+}

@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test 1</title>
+    <title>Test 2</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
@@ -22,8 +22,9 @@
 
 <body>
     <header class="">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark pr-5 pl-5">
-            <a class="navbar-brand" href="#">
+        <nav class="navbar navbar-expand-lg navbar-dark bg_primary pr-5 pl-5 ">
+
+            <a class="navbar-brand ml-5" href="#">
                 <span class="fa fa-graduation-cap"></span>
                 TutorCo.
             </a>
@@ -33,10 +34,14 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav mr-auto ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
+                        <a class="nav-link samepage" href="#services">Services</a>
                     </li>
+                    <li class="nav-item "><a href="#blog" class="nav-link samepage">Blog</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#join-us" class="nav-link samepage">Join Us</a></li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="modal" data-target="#contactUsModal" href="#contact-us">Contact
                             Us</a>
@@ -45,79 +50,215 @@
                         <a class="nav-link" data-toggle="modal" data-target="#signupModal" href="#signup">Sign up</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <form class="form-inline my-2 my-lg-0 flex-nowrap">
+                    <span class="fa fa-search color-white_darken position-relative" style="left:15px;"></span>
+                    <input class="form-control mr-sm-2 border-0  bg_primary pl-4 color-white_darken" type="search"
+                        placeholder="Search" aria-label="Search">
                 </form>
             </div>
         </nav>
     </header>
 
     <main>
-        <div class=" bg-secondary p-5 text-white">
-            <div class="container">
+        <div class=" bg_primary p-5 text-white">
+            <div class="container leadin">
                 <div class="row">
-                    <div class="col-md-6">
-                        <img src="https://images.pexels.com/photos/2495239/pexels-photo-2495239.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="scholar" class="img-fluid">
+                    <div class="col-md-6 mb-4">
+                        <img 
+                            src="https://images.pexels.com/photos/2495239/pexels-photo-2495239.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt="scholar" class="img-fluid">
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4 mb-5">
                         <h2 class="text-center mb-2">Find a Tutor</h2>
                         <form class="needs-validation" novalidate>
-                            <input type="text" required placeholder="price" class="form-control mb-2">
-                            <input type="text" required placeholder="location" class="form-control mb-2">
-                            <input type="text" required placeholder="subject" class="form-control mb-2">
-                            <button class="btn btn-primary" type="submit">Find</button>
+                            <div class="form-group">
+                                <input type="text" required placeholder="price" class="form-control mb-2 rounded-0">
+                                <div class="invalid-feedback">
+                                    Please enter a price.
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" required placeholder="location" class="form-control mb-2 rounded-0">
+                                <div class="invalid-feedback">Please enter a location.</div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" required placeholder="subject" class="form-control mb-2 rounded-0">
+                                <div class="invalid-feedback">Please enter a subject.</div>
+                            </div>
+                            <div class="message">Fill out this form to find a tutor.</div>
+                            <button class="btn btn_primary rounded-0 mt-4" type="submit">Find Tutor</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="mt-5">
-            <div class="container">
+        <div class="bg_secondary pb-5">
+            <div class="container-fluid" id="join-us">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="carousel-card text-center bg-white text-dark w-md-50 m-auto p-5">
+                                <h3 class="mt-4 mb-3">Join Us</h3>
+                                <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, ut nemo
+                                    distinctio accusantium doloribus ipsum culpa cum quia unde rerum?</p>
+                                <button class="btn btn_primary mb-5 mt-5">Join Tutor Co.</button>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-card text-center bg-white text-dark w-md-50 m-auto p-5">
+                                <h3 class="mt-4 mb-3">Join Us Perks</h3>
+                                <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, ut nemo
+                                    distinctio accusantium doloribus ipsum culpa cum quia unde rerum?</p>
+                                <button class="btn btn_primary mb-5 mt-5">Join Tutor Co.</button>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-card text-center bg-white text-dark m-auto p-5">
+                                <h3 class="mt-4 mb-3">Join Us Events</h3>
+                                <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, ut nemo
+                                    distinctio accusantium doloribus ipsum culpa cum quia unde rerum?</p>
+                                <button class="btn btn_primary mb-5 mt-5">Join Tutor Co.</button>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon text-secondary" aria-hidden="true">
+                            <span class="fa fa-chevron-left"></span>
+                        </span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon text-secondary" aria-hidden="true">
+                            <span class="fa fa-chevron-right"></span>
+                        </span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="container ">
                 <h2 id="services" class="text-center mt-5 mb-5">Services</h2>
                 <div class="row" style="justify-content: center;">
-                    <div class="col-md-3 mr-2 mb-2 service bg-secondary text-white p-3">
-                        <h4 class="text-center">Tutoring</h3>
-                        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur esse suscipit atque omnis est officia, corrupti eum ab neque quae, possimus autem incidunt ex voluptatum maiores. Magnam alias ex illo.</p>
+                    <div class="col-md-4 pb-2 pr-2 service p-3">
+                        <div class="bg-white p-3">
+                            <div class="text-center">
+                                <span class="fa fa-graduation-cap"></span>
+                            </div>
+                            <h4 class="text-center">Tutoring</h3>
+                                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus cupiditate adipisci ad fugiat temporibus. Accusamus, ipsum itaque voluptatum molestiae explicabo ab illo eum magni, nisi nam nobis tenetur fuga eius.</p>
+                        </div>
                     </div>
-                    <div class="col-md-3 mr-2 mb-2 service bg-secondary text-white p-3">
-                        <h4 class="text-center">HomeWork Assistance</h3>
-                        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, eveniet tenetur nisi magni velit non? Pariatur cum voluptates odio, sunt voluptatum eaque fugit, labore debitis deleniti delectus, asperiores earum nostrum?</p>
+                    <div class="col-md-4 pb-2 pr-2 service  p-3">
+                        <div class="bg-white p-3">
+                            <div class="text-center">
+                                <span class="fa fa-book"></span>
+                            </div>
+                            <h4 class="text-center">Home Work Assistance</h3>
+                                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit illo rem ipsum, incidunt pariatur, repellendus ab molestiae eius, mollitia dolore cum magnam dolorum sapiente voluptas recusandae totam asperiores vitae!
+                                </p>
+                        </div>
                     </div>
-                    <div class="col-md-3 mb-2 mr-2 service bg-secondary text-white p-3">
-                        <h4 class="text-center">Special Ed</h3>
-                        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores consectetur nisi nostrum id laudantium blanditiis fugiat magnam minima maxime quod enim assumenda amet facere beatae quis culpa, impedit veritatis repudiandae.</p>
+                    <div class="col-md-4 pb-2 pr-2 service p-3">
+                        <div class="bg-white p-3 ">
+                            <div class="text-center">
+                                <span class="fa fa-sign-language"></span>
+                            </div>
+                            <h4 class="text-center">Special Ed</h3>
+                                <p class="text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse eaque dolorum iure maxime rerum maiores adipisci sunt qui quam deserunt ipsa nulla accusamus, consectetur saepe! Repellat quos rerum quisquam blanditiis.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="bg-secondary text-white mt-5 p-5">
-            <h2 id="blog" class="text-center mb-5">Blog</h2>
+        <div class="subscribe p-5 bg_primary text-white">
+            <div class="container">
+                <form action="#" class="needs-validation d-md-flex justify-content-around subscribe-form" novalidate>
+                    <div class="formtext text-center">
+                        <p style="font-size: 25px;">Want to see more?</p>
+                        <h3 class="bold">Subscribe to our news.</h3>
+                    </div>
+                    <div class="form-section d-sm-flex" >
+                        <div class="form-group pt-3">
+                            <input type="email" required class="form-control rounded-0" placeholder="Enter your email">
+                            <div class="invalid-feedback">
+                                Please enter a valid email.
+                            </div>
+                        </div>
+                        <div class="submit-btn ml-3 pt-3">
+                            <button class="btn btn_primary rounded-0">Subscribe</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="bg_secondary p-5" id="blog">
+            <h2 id="blog" class="text-center mb-5 mt-5">Blog</h2>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 text-center">
-                        <div class="mb-2">
-                            <img src="https://images.pexels.com/photos/2495239/pexels-photo-2495239.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="img-fluid">
-                        </div>
-                        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis recusandae voluptatum cupiditate eos, nemo iusto neque quisquam atque nam praesentium ad modi maxime, corporis similique amet quas perferendis cumque! Atque.</p>
-                        <button class="mt-5 btn btn-primary">Get Started</button>
-                    </div>
-                    <div class="col-md-3 mt-4">
-                        <div class="mb-2">
-                            <img src="https://images.pexels.com/photos/2495239/pexels-photo-2495239.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="img-fluid">
-                        </div>
-                        <div class="mb-2">
-                            <img src="https://images.pexels.com/photos/2495239/pexels-photo-2495239.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="img-fluid">
-                        </div>
-                        <div class="mb-2">
-                            <img src="https://images.pexels.com/photos/2495239/pexels-photo-2495239.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="img-fluid">
+                    <div class="col-lg-6 mb-5">
+                        <div class="blog-content bg-white text-center">
+                            <div class="blog-image w-100">
+                                <img src="https://images.pexels.com/photos/7403185/pexels-photo-7403185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="special ed. person pic" class="img-fluid">
+                            </div>
+                            <div class="blog-text-section p-4">
+                                <p class="blog-date text-secondary font-weight-bold mt-3 mb-3">
+                                    26, Feb. 2020
+                                </p>
+                                <h4>New Research on Special Education Offers Hope For Lorem ipsum dolor sit.</h4>
+                                <a href="#" class="btn btn_primary rounded-0 mb-4 mt-5 text-white">Read More</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-
+                    <div class="col-lg-6">
+                        <div class="blog-list">
+                            <div class="blog-list-item row" data-link-url="#">
+                                <div class="blog-list-item_image w-100 col-md-6 mt-2">
+                                    <img src="https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="img-fluid">
+                                </div>
+                                <div class="blog-list-item_content col-md-6">
+                                    <div class="ml-2">
+                                        <p class="date text-secondary">25, Dec. 2020</p>
+                                        <h5 class="title">Lorem ipsum dolor sit amet.</h5>
+                                        <p class="excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ratione sapiente saepe ut!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="blog-list-item row" data-link-url="#">
+                                <div class="blog-list-item_image w-100 col-md-6 mt-2">
+                                    <img src="https://images.pexels.com/photos/256468/pexels-photo-256468.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="img-fluid">
+                                </div>
+                                <div class="blog-list-item_content col-md-6">
+                                    <div class="ml-2">
+                                        <p class="date text-secondary">25, Dec. 2020</p>
+                                        <h5 class="title">Lorem ipsum dolor sit amet.</h5>
+                                        <p class="excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ratione sapiente saepe ut!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="blog-list-item row" data-link-url="#">
+                                <div class="blog-list-item_image w-100 col-md-6 mt-2">
+                                    <img src="https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="img-fluid">
+                                </div>
+                                <div class="blog-list-item_content col-md-6">
+                                    <div class="ml-2">
+                                        <p class="date text-secondary">25, Dec. 2020</p>
+                                        <h5 class="title">Lorem ipsum dolor sit amet.</h5>
+                                        <p class="excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ratione sapiente saepe ut!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
+            
         </div>
     </main>
 
@@ -177,7 +318,8 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="dob">Date of Birth</label>
-                                <input type="date" class="form-control" required placeholder="your dob" name="dob" id="dob">
+                                <input type="date" class="form-control" required placeholder="your dob" name="dob"
+                                    id="dob">
                                 <div class="invalid-feedback">please enter your date of birth</div>
                             </div>
                             <div class="form-group col-md-6">
@@ -192,7 +334,7 @@
                                 </select>
                                 <div class="invalid-feedback">Please select an area of interest</div>
                             </div>
-                            
+
                         </div>
                         <div class="form-group">
                             <div class="form-check">
@@ -287,6 +429,22 @@
     <script>
         (function () {
             'use strict';
+            // ----- Scroll Effect on nav item click
+            var headerHeight = $('.navbar').outerHeight(); // Target your header navigation here
+    
+            $('.nav-link.samepage').click(function(e) {
+                var targetHref   = $(this).attr('href');
+                console.log($(targetHref).offset().top , headerHeight)    
+                
+            $('html, body').animate({
+                scrollTop: $(targetHref).offset().top - headerHeight // Add it to the calculation here
+            }, 1000);
+            
+                e.preventDefault();
+            });
+            // ---------
+
+
             function onformModalHidden($modal) {
                 $modal.find('form')[0].reset()
                 $modal.find('form').removeClass('was-validated')
@@ -296,7 +454,7 @@
 
             })
 
-            window.addEventListener('load', function () {
+            $(document).ready(function () {
                 // Fetch all the forms we want to apply custom Bootstrap validation styles to
                 var forms = document.getElementsByClassName('needs-validation');
                 // Loop over them and prevent submission
@@ -307,6 +465,9 @@
                             event.stopPropagation();
                         }
                         else {
+                            if(form.classList.contains('subscribe-form')){
+                                $('.subscribe').slideUp()
+                            }
                             $('.modal').modal('hide')
                             Alert({ status: true, message: 'Your form was successfully submitted!' })
                         }
@@ -317,14 +478,6 @@
             }, false);
         })();
     </script>
-    <style>
-        .service{
-            transition: all ease-in-out 0.3s;
-        }
-        .service:hover{
-            background-color: rgb(32, 32, 32)!important;
-        }
-    </style>
 </body>
 
 </html>
