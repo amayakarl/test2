@@ -9,4 +9,4 @@
 1. `$('html, body').animate` - animate the scroll to a section of the page when a nav-link is clicked
 2. `$('.subscribe').slideUp` - if the form is valid then the subscribe div will be hidden with the slide up effect
 
-View demo: 
+View demo: https://amayakarl.github.io/test2/
